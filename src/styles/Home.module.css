@@ -74,6 +74,20 @@
   }
 }
 
+@media (min-width: 360px) and (max-width: 900px) and (orientation: landscape) {
+  .loginPage_logo {
+    width: 171px;
+  }
+
+  .loginPage_title {
+    font-size: 2.1em;
+  }
+
+  .loginPage_rightSlogan {
+    font-size: 1.9em;
+  }
+}
+
 @media (min-width: 210px) and (max-width: 768px) and (orientation: portrait) {
   .loginPage {
     max-width: 100%;
@@ -91,12 +105,12 @@
     margin-top: 6%;
     text-align: center;
   }
-  
+
   .loginPage_logo {
     width: 240px;
     height: auto;
   }
-  
+
   .loginPage_right {
     display: none;
   }
