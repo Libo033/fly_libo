@@ -137,6 +137,69 @@
 }
 /*#endregion */
 
+/*#region LOW_PRICES */
+.lowPrices {
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lowPrices_Content {
+  width: 81%;
+  display: flex;
+  flex-direction: column;
+}
+
+.lowPrices_Content1 {
+  margin-block: 1rem;
+}
+
+.lowPrices_Content1 h2 {
+  text-align: center;
+}
+
+.lowPrices_Content2 {
+  margin-block: 1rem;
+}
+
+.lowPrices_Content2 p {
+  padding-inline: 20%;
+  text-align: center;
+}
+
+.lowPrices_section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.lowPrices_article {
+  margin-block: 1rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lowPrices_articleImg {
+  width: 222px;
+  height: auto;
+}
+
+.lowPrices_articleTitle {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.lowPrices_articleText {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: gray;
+}
+/*#endregion */
+
 @media (min-width: 1921px) {
   /*#region NAVIGATION_BAR */
   .NavigationBar {
@@ -170,6 +233,22 @@
 
   .NavigationBar_logoLi {
     width: 30%;
+  }
+  /*#endregion */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /*#region LOW_PRICES */
+  .lowPrices_Content {
+    width: 96%;
+  }
+
+  .lowPrices_Content2 p {
+    padding-inline: 15%;
+  }
+
+  .lowPrices_articleImg {
+    width: 210px;
   }
   /*#endregion */
 }
@@ -264,6 +343,46 @@
     background-color: transparent;
     font-size: 1em;
     font-weight: 600;
+  }
+  /*#endregion */
+
+  /*#region LOW_PRICES */
+  .lowPrices {
+    padding-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .lowPrices_Content {
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lowPrices_Content1 h2 {
+    padding-left: 6%;
+    text-align: left;
+  }
+
+  .lowPrices_Content2 p {
+    padding-left: 6%;
+    padding-right: 3%;
+    text-align: left;
+  }
+
+  .lowPrices_section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lowPrices_article {
+    width: 96%;
+    flex-direction: row;
+  }
+
+  .lowPrices_articleImg {
+    width: 180px;
   }
   /*#endregion */
 }
