@@ -11,3 +11,9 @@ export interface IAuthContext {
   logOut: Function | null;
   loaded: boolean;
 }
+
+export interface IOpenDrawer {
+  handleLogOut: Function;
+  loaded: boolean;
+  user: User | null;
+}
