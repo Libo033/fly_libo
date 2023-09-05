@@ -1,11 +1,11 @@
-import Layout from "@/components/Layout";
 import LoadingPage from "@/components/LoadingPage";
 import LoginGroup from "@/components/LoginGroup";
 import { AuthContext } from "@/context/AuthContext";
 import styles from "@/styles/Home.module.css";
 import { Titillium_Web } from "next/font/google";
 import Image from "next/image";
-import React, { useContext } from "react";
+import { NextRouter, useRouter } from "next/router";
+import React, { useContext, useEffect } from "react";
 
 const titi = Titillium_Web({
   weight: ["200", "300", "400", "600", "700", "900"],
@@ -13,11 +13,18 @@ const titi = Titillium_Web({
 });
 
 export default function Home() {
+  const router: NextRouter = useRouter();
   const { user, loaded } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (loaded && user) {
+      router.push("/inicio");
+    }
+  }, [user]);
 
   return (
     <>
-      {loaded ? (
+      {loaded && user === null ? (
         <div style={titi.style} className={styles.loginPage}>
           <div className={styles.loginPage_left}>
             <div className={styles.loginPage_logoContainer}>
