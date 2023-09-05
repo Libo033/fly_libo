@@ -9,14 +9,16 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
-const Layout: React.FC<ILayout> = ({children}) => {
+const Layout: React.FC<ILayout> = ({ children }) => {
   return (
     <>
       <Head>
         <title>FlyLibo</title>
       </Head>
       <div style={roboto.style}>
-        <NavigationBar />
+        <header style={{width: "100%", boxShadow: "1px 2px 6px gainsboro"}}>
+          <NavigationBar />
+        </header>
         {children}
       </div>
     </>
