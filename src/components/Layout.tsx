@@ -22,6 +22,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
             width: "100%",
             boxShadow: "1px 2px 6px gainsboro",
             position: "fixed",
+            zIndex: "999"
           }}
         >
           <NavigationBar />
