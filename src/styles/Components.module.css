@@ -29,6 +29,7 @@
 
 /*#region NAVIGATION_BAR */
 .NavigationBar {
+  background-color: white;
   height: 10vh;
   max-width: 1536px;
   min-width: 210px;
@@ -208,7 +209,7 @@
 .footer {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
+  padding-top: 1rem;
   background-color: #151515;
   max-width: 1536px;
   min-width: 210px;
@@ -258,6 +259,63 @@
   width: 120px;
   height: auto;
   filter: invert(100%);
+}
+/*#endregion */
+
+/*#region NEWS_LETTER */
+.newsLetterContent {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsLetter_title {
+  margin-block: 1.5rem;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.newsLetter_text {
+  color: #151515;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+}
+
+.newsLetter_inputContainer {
+  width: 100%;
+  margin: 1rem 0 3rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.newsLetter_input {
+  width: 33%;
+  border: 1px solid gainsboro;
+  height: 42px;
+  font-size: 0.99em;
+  padding-inline: 6px;
+  border-radius: 3px;
+  outline: none;
+}
+
+.newsLetter_button {
+  transition: 120ms ease-in-out 0s;
+  border-radius: 6px;
+  border: 1px solid gray;
+  padding-inline: 1.8rem;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #00a6ff;
+  color: white;
+  cursor: pointer;
+}
+
+.newsLetter_button:hover {
+  transition: 120ms ease-in-out 0s;
+  border-radius: 21px;
 }
 /*#endregion */
 
@@ -450,6 +508,21 @@
     width: 100%;
     justify-content: space-evenly;
     gap: 0;
+  }
+  /*#endregion */
+
+  /*#region NEWS_LETTER */
+  .newsLetter_text {
+    text-align: center;
+    padding-inline: 1%;
+  }
+
+  .newsLetter_inputContainer {
+    gap: 12px;
+  }
+
+  .newsLetter_input {
+    width: 57%;
   }
   /*#endregion */
 }
