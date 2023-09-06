@@ -264,6 +264,7 @@
 
 /*#region NEWS_LETTER */
 .newsLetterContent {
+  margin-top: 3rem;
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
@@ -346,6 +347,16 @@
 
   .NavigationBar_logoLi {
     width: 30%;
+  }
+  /*#endregion */
+
+  /*#region FOOTER */
+  .footer_social {
+    height: 18vh;
+  }
+
+  .footer_bottom {
+    height: 18vh;
   }
   /*#endregion */
 }

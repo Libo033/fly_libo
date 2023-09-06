@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useId, useState } from "react";
 import { Roboto } from "next/font/google";
 import Head from "next/head";
 import { ILayout } from "@/libs/interfaces";
@@ -17,7 +17,13 @@ const Layout: React.FC<ILayout> = ({ children }) => {
         <title>FlyLibo</title>
       </Head>
       <div style={roboto.style}>
-        <header style={{ width: "100%", boxShadow: "1px 2px 6px gainsboro" }}>
+        <header
+          style={{
+            width: "100%",
+            boxShadow: "1px 2px 6px gainsboro",
+            position: "fixed",
+          }}
+        >
           <NavigationBar />
         </header>
         {children}
