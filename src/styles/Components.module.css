@@ -30,7 +30,10 @@
 /*#region NAVIGATION_BAR */
 .NavigationBar {
   height: 10vh;
-  width: 100%;
+  max-width: 1536px;
+  min-width: 210px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -112,9 +115,10 @@
 }
 
 .NavigationBar_initSesionButton {
+  border-radius: 3px;
   box-shadow: inset 0 0 0 0 #00a6ff;
   color: #00a6ff;
-  padding: 0 0.25rem;
+  padding: 0 0.3rem;
   margin: 0 -0.25rem;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   color: #121212;
@@ -200,14 +204,65 @@
 }
 /*#endregion */
 
+/*#region FOOTER */
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  background-color: #151515;
+  max-width: 1536px;
+  min-width: 210px;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 3%;
+}
+
+.footer_social {
+  height: 12vh;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.footer_logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_logo {
+  transition: 150ms ease-in-out;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+.footer_logo:hover {
+  transition: 150ms ease-in-out;
+  filter: invert(60%);
+}
+
+.footer_bottom {
+  border-top: 1px solid gainsboro;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer_txt {
+  font-size: 0.81em;
+  color: gainsboro;
+}
+
+.footer_flylibo {
+  width: 120px;
+  height: auto;
+  filter: invert(100%);
+}
+/*#endregion */
+
 @media (min-width: 1921px) {
   /*#region NAVIGATION_BAR */
-  .NavigationBar {
-    width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .NavigationBar_logo {
     width: 120px;
   }
@@ -383,6 +438,18 @@
 
   .lowPrices_articleImg {
     width: 180px;
+  }
+  /*#endregion */
+
+  /*#region FOOTER */
+  .footer {
+    padding-inline: 4.5%;
+  }
+
+  .footer_social {
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 0;
   }
   /*#endregion */
 }
