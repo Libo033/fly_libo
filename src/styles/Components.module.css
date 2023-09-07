@@ -328,6 +328,7 @@
   align-items: flex-end;
   padding-top: 400px;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .flySelect_imgBackground {
@@ -351,7 +352,7 @@
 }
 
 .flySelect_container {
-  width: 21%;
+  width: 24%;
   display: flex;
   flex-direction: column;
 }
@@ -359,16 +360,37 @@
 .flySelect_label {
   font-weight: 600;
   font-size: 0.9em;
+  color: #454545;
 }
 
-.flySelect_select {
+.flySelect_selectTakeOff {
   border: 1px solid gainsboro;
   height: 32px;
+  padding-left: 36px;
   outline: none;
+  background-image: url("/img/takeoff.svg");
+  background-repeat: no-repeat;
+  background-position: left 6px center;
+  background-size: 27px;
 }
 
-.flySelect_select:focus {
-  border: 1px solid #00a6ff;
+.flySelect_selectTakeOff:focus {
+  border: 2px solid #00a6ff;
+}
+
+.flySelect_selectLanding {
+  border: 1px solid gainsboro;
+  height: 32px;
+  padding-left: 36px;
+  outline: none;
+  background-image: url("/img/landing.svg");
+  background-repeat: no-repeat;
+  background-position: left 6px center;
+  background-size: 27px;
+}
+
+.flySelect_selectLanding:focus {
+  border: 2px solid #00a6ff;
 }
 
 .flySelect_inputN {
@@ -376,6 +398,10 @@
   height: 32px;
   outline: none;
   padding-inline: 3px;
+}
+
+.flySelect_inputN:focus {
+  border: 2px solid #00a6ff;
 }
 
 .flySelect_button {
@@ -450,6 +476,16 @@
 
   .lowPrices_articleImg {
     width: 210px;
+  }
+  /*#endregion */
+
+  /*#region FLY_SELECT */
+  .flySelect_form {
+    width: 98%;
+  }
+
+  .flySelect_container {
+    width: 25%;
   }
   /*#endregion */
 }
@@ -611,6 +647,33 @@
 
   .newsLetter_input {
     width: 57%;
+  }
+  /*#endregion */
+
+  /*#region FLY_SELECT */
+  .flySelect {
+    position: relative;
+    height: fit-content;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 400px;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .flySelect_form {
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .flySelect_container {
+    margin-block: 1.2rem;
+    width: 90%;
+  }
+
+  .flySelect_button {
+    width: 45%;
+    margin: 0.5rem 0 2.1rem 0;
   }
   /*#endregion */
 }
