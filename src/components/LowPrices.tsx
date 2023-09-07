@@ -20,7 +20,7 @@ const LowPrices = () => {
             <Image
               className={styles.lowPrices_articleImg}
               src={"/img/planes.svg"}
-              alt=""
+              alt="planes"
               width={330}
               height={330}
             />
@@ -36,7 +36,7 @@ const LowPrices = () => {
             <Image
               className={styles.lowPrices_articleImg}
               src={"/img/wallet.svg"}
-              alt=""
+              alt="wallet"
               width={330}
               height={330}
             />
@@ -54,7 +54,7 @@ const LowPrices = () => {
             <Image
               className={styles.lowPrices_articleImg}
               src={"/img/online_but.svg"}
-              alt=""
+              alt="online buy"
               width={330}
               height={330}
             />
