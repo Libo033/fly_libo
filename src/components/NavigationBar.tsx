@@ -39,6 +39,7 @@ const NavigationBar = () => {
       <ul className={styles.NavigationBar_logoUl}>
         <li className={styles.NavigationBar_logoLi}>
           <Image
+            onClick={() => router.push("/inicio")}
             className={styles.NavigationBar_logo}
             src={"/img/FlyLibo-logos_noback.png"}
             alt="FlyLibo"
