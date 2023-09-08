@@ -7,6 +7,7 @@ import Link from "next/link";
 import Reserva from "@/components/Reserva";
 import { Divider } from "@mui/material";
 import NewsLetter from "@/components/NewsLetter";
+import Extras from "@/components/Extras";
 
 const Reservas = () => {
   const { user, loaded } = useContext(AuthContext);
@@ -26,7 +27,8 @@ const Reservas = () => {
               </p>
             )}
             <Divider />
-            
+            <Divider />
+            <Extras />
             <Divider />
             <Reserva />
             <NewsLetter />
