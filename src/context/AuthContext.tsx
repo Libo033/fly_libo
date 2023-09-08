@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 import { IAuthContext } from "@/libs/interfaces";
 import { auth } from "@/libs/Firebase";
+import { NextRouter, useRouter } from "next/router";
 
 const defaultValue: IAuthContext = {
   user: null,
@@ -21,7 +22,10 @@ const defaultValue: IAuthContext = {
 export const AuthContext: React.Context<IAuthContext> =
   createContext(defaultValue);
 
-export const AuthContextProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
+export const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const router: NextRouter = useRouter();
   const [loaded, setLoaded] = useState<boolean>(false);
   const [user, setUser] = useState<User | null>(null);
 
@@ -43,8 +47,10 @@ export const AuthContextProvider: React.FC<{children: React.ReactNode}> = ({chil
     }
   };
 
-  const logOut = async () => {
-    await signOut(auth);
+  const logOut = () => {
+    signOut(auth);
+    router.push("/");
+    location.reload();
   };
 
   useEffect(() => {
@@ -54,15 +60,17 @@ export const AuthContextProvider: React.FC<{children: React.ReactNode}> = ({chil
       }
       setLoaded(true);
     });
-  
+
     return () => {
-      unsubscribe()
-    }
+      unsubscribe();
+    };
   }, [user]);
 
   return (
-    <AuthContext.Provider value={{loaded, user, logOut, googleSignIn, facebookSignIn}}>
+    <AuthContext.Provider
+      value={{ loaded, user, logOut, googleSignIn, facebookSignIn }}
+    >
       {children}
     </AuthContext.Provider>
-  )
-}
+  );
+};

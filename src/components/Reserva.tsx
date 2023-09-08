@@ -33,7 +33,7 @@ const Reserva = () => {
           />
           <p className={styles.reserva_articleTitle}>Visite las cascadas</p>
           <p className={styles.reserva_articleText}>
-            Planifique su proximo viaje con nuestras taribas mas bajas.
+            Planifique su proximo viaje con nuestras tarifas mas bajas.
           </p>
         </article>
         <article className={styles.reserva_article}>
