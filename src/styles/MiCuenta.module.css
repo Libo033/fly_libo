@@ -1,0 +1,13 @@
+.miCuenta {
+  height: fit-content;
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10vh;
+}
+
+@media (min-width: 360px) and (max-width: 950px) and (max-height: 420px) and (orientation: landscape) {
+  .miCuenta {
+    padding-top: 18vh;
+  }
+}

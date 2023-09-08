@@ -47,14 +47,14 @@ const NavigationBar = () => {
           />
         </li>
         <li className={styles.NavigationBar_linksUl}>
-          <Link className={styles.NavigationBar_link} href={"/"}>
+          <Link className={styles.NavigationBar_link} href={"/reservas"}>
             Reservas
           </Link>
-          <Link className={styles.NavigationBar_link} href={"/"}>
+          <Link className={styles.NavigationBar_link} href={"/destinos"}>
             Destinos
           </Link>
           {loaded && user ? (
-            <Link className={styles.NavigationBar_link} href={"/"}>
+            <Link className={styles.NavigationBar_link} href={"/micuenta"}>
               Mi cuenta
             </Link>
           ) : undefined}
