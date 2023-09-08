@@ -18,8 +18,43 @@
   color: black;
 }
 
+.reservas_container {
+  width: 100%;
+  height: 30vh;
+  margin-block: 1.5rem;
+  background-color: whitesmoke;
+  border: 1px solid gainsboro;
+  border-radius: 12px;
+}
+
+.reservas_emptyTxt {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: center;
+  cursor: default;
+}
+
 @media (min-width: 360px) and (max-width: 950px) and (max-height: 420px) and (orientation: landscape) {
   .reservas {
     padding-top: 18vh;
   }
+}
+
+@media (min-width: 210px) and (max-width: 768px) and (orientation: portrait) {
+  .reservas_title {
+    font-size: 1em;
+  }
+  
+  .reservas_container {
+    height: 33vh;
+  }
+  
+  .reservas_emptyTxt {
+    font-size: 0.9em;
+  }  
 }

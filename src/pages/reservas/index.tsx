@@ -23,10 +23,18 @@ const Reservas = () => {
               </p>
             ) : (
               <p className={styles.reservas_title}>
-                <Link href={"/"}>Inicia sesion</Link> para ver tus reservas o para crearlas. 
+                <Link href={"/"}>Inicia sesion</Link> para ver tus reservas o
+                para crearlas.
               </p>
             )}
-            <Divider />
+            {user !== null && (
+              <div className={styles.reservas_container}>
+                <p className={styles.reservas_emptyTxt}>
+                  No tenes reservas.
+                  <br /> Cuando tengas reservas apareceran aqui.
+                </p>
+              </div>
+            )}
             <Divider />
             <Extras />
             <Divider />
