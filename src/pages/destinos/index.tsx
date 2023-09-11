@@ -8,6 +8,9 @@ const Destinos = () => {
   return (
     <Layout>
       <div className={styles.destinos}>
+        <div>
+          <p className={styles.destinos_inter}>¡Proximamente destinos internacionales!</p>
+        </div>
         <CuatroDestinos />
         <NewsLetter />
       </div>

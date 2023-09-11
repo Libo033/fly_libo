@@ -6,6 +6,14 @@
   padding-top: 10vh;
 }
 
+.destinos_inter {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 3rem;
+  text-decoration: underline;
+  color: #0071ad;
+}
+
 @media (min-width: 360px) and (max-width: 950px) and (max-height: 420px) and (orientation: landscape) {
   .destinos {
     padding-top: 18vh;
