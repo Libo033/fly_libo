@@ -10,7 +10,7 @@ const Reserva = () => {
         <article className={styles.reserva_article}>
           <Image
             className={styles.reserva_articleImage}
-            src={"/img/apps.jpg"}
+            src={"https://res.cloudinary.com/dsuydyqgz/image/upload/v1694437727/01-varios/b4zoifzipxf6rz0czh4i.jpg"}
             alt="apps"
             width={6000}
             height={4000}
@@ -26,7 +26,7 @@ const Reserva = () => {
         <article className={styles.reserva_article}>
           <Image
             className={styles.reserva_articleImage}
-            src={"/img/cascada.jpg"}
+            src={"https://res.cloudinary.com/dsuydyqgz/image/upload/v1694437726/01-varios/xhkindccrcqmjokjkbcb.jpg"}
             alt="cascada"
             width={4896}
             height={2754}
@@ -39,7 +39,7 @@ const Reserva = () => {
         <article className={styles.reserva_article}>
           <Image
             className={styles.reserva_articleImage}
-            src={"/img/salta.jpg"}
+            src={"https://res.cloudinary.com/dsuydyqgz/image/upload/v1694437726/01-varios/ijteu9iyu22tydqljtyb.jpg"}
             alt="salta"
             width={3083}
             height={3853}

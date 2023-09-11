@@ -508,6 +508,50 @@
 }
 /*#endregion */
 
+/*#region CUATRO_DESTINOS */
+.cuatroDestinos {
+  height: fit-content;
+  width: 100%;
+  padding-inline: 1.5%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.cuatroDestinos_title {
+  margin-top: 3rem;
+  padding-inline: 1.5%;
+  font-size: 2.1em;
+  font-weight: 500;
+  margin-bottom: 0.9rem;
+  text-align: center;
+}
+
+.cuatroDestinos_art {
+  width: 24%;
+  position: relative;
+}
+
+.cuatroDestinos_artImage {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 1px solid gainsboro;
+}
+
+.cuatroDestinos_artText {
+  position: absolute;
+  font-size: 2.4em;
+  font-weight: 600;
+  bottom: 21px;
+  left: 9px;
+  color: white;
+  -webkit-text-stroke: 2px #121212;
+  cursor: default;
+}
+/*#endregion */
+
 @media (min-width: 1921px) {
   /*#region NAVIGATION_BAR */
   .NavigationBar_logo {
@@ -549,7 +593,7 @@
   /*#endregion */
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 1024px) {
   /*#region LOW_PRICES */
   .lowPrices_Content {
     width: 96%;
@@ -579,9 +623,22 @@
     height: 180px;
   }
   /*#endregion */
+
+  /*#region CUATRO_DESTINOS */
+  .cuatroDestinos {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 36px;
+  }
+
+  .cuatroDestinos_art {
+    max-width: 24%;
+    min-width: 270px;
+  }
+  /*#endregion */
 }
 
-@media (min-width: 210px) and (max-width: 768px) and (orientation: portrait) {
+@media (min-width: 210px) and (max-width: 767px) and (orientation: portrait) {
   /*#region NAVIGATION_BAR */
   .NavigationBar_menu {
     position: absolute;
@@ -821,6 +878,44 @@
 
   .extras_image {
     width: 45%;
+  }
+  /*#endregion */
+
+  /*#region CUATRO_DESTINOS */
+  .cuatroDestinos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 36px;
+  }
+
+  .cuatroDestinos_title {
+    text-align: left;
+    padding-left: 9%;
+  }
+
+  .cuatroDestinos_art {
+    max-width: 24%;
+    min-width: 330px;
+  }
+
+  .cuatroDestinos_artImage {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+  }
+
+  .cuatroDestinos_artText {
+    position: absolute;
+    font-size: 2.4em;
+    font-weight: 600;
+    bottom: 21px;
+    left: 9px;
+    color: white;
+    -webkit-text-stroke: 2px #121212;
+    cursor: default;
   }
   /*#endregion */
 }
