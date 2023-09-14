@@ -264,6 +264,7 @@
 
 /*#region NEWS_LETTER */
 .newsLetterContent {
+  position: relative;
   margin-top: 3rem;
   background-color: #fafafa;
   display: flex;
@@ -314,9 +315,40 @@
   cursor: pointer;
 }
 
+.newsLetter_button:disabled {
+  background-color: whitesmoke;
+  color: gray;
+  border: 1px solid gainsboro;
+  cursor: default;
+}
+
+.newsLetter_button:disabled:hover {
+  border-radius: 6px;
+}
+
 .newsLetter_button:hover {
   transition: 120ms ease-in-out 0s;
   border-radius: 21px;
+}
+
+.newsLetterReceived {
+  position: relative;
+  margin-top: 3rem;
+  padding-block: 1.5rem;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.newsLetter_cross {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 21px;
+  cursor: pointer;
+  filter: opacity(45%);
 }
 /*#endregion */
 
