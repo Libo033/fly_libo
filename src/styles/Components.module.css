@@ -144,6 +144,7 @@
 
 /*#region LOW_PRICES */
 .lowPrices {
+  margin-bottom: 3rem;
   padding-top: 3rem;
   width: 100%;
   display: flex;
@@ -265,7 +266,6 @@
 /*#region NEWS_LETTER */
 .newsLetterContent {
   position: relative;
-  margin-top: 3rem;
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
@@ -457,6 +457,8 @@
 
 /*#region RESERVA */
 .reserva {
+  padding-inline: 3%;
+  margin-bottom: 3.3rem;
   display: flex;
   flex-direction: column;
 }
@@ -499,6 +501,7 @@
 
 /*#region EXTRAS */
 .extras {
+  padding-inline: 3%;
   margin-block: 2.4rem;
   display: flex;
   flex-direction: column;
@@ -540,14 +543,14 @@
 }
 /*#endregion */
 
-/*#region CUATRO_DESTINOS */
+/*#region CUATRO_DESTINOS */  
 .cuatroDestinos {
   height: fit-content;
   width: 100%;
   padding-inline: 1.5%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 3.3rem;
 }
 
 .cuatroDestinos_title {
@@ -828,6 +831,16 @@
   .newsLetter_input {
     width: 57%;
   }
+
+  .newsLetterReceived {
+    padding-block: 2.4rem;
+    background-color: #fafafa;
+    gap: 9px;
+  }
+
+  .newsLetter_title {
+    font-size: 1.41em;
+  }
   /*#endregion */
 
   /*#region FLY_SELECT */
@@ -950,4 +963,6 @@
     cursor: default;
   }
   /*#endregion */
+
+
 }
