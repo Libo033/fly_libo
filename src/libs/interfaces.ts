@@ -17,3 +17,16 @@ export interface IOpenDrawer {
   loaded: boolean;
   user: User | null;
 }
+
+export interface IFlySelect {
+  destination: string[];
+  origin: string[];
+}
+
+export interface IFly {
+  availability: number;
+  data: string;
+  destination: string;
+  origin: string;
+  price: number;
+}
