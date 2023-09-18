@@ -5,6 +5,8 @@ import { FlyContext } from "@/context/FlyContext";
 import { filterOriDestPass } from "@/libs/filterOriDestPass";
 import { NextRouter, useRouter } from "next/router";
 import { sortDate } from "@/libs/sortDate";
+import { formatDate } from "@/libs/formatDate";
+import { getDateValue } from "@/libs/getDateValue";
 
 const TableFly: React.FC<{ vuelos: IFly[] }> = ({ vuelos }) => {
   const router: NextRouter = useRouter();
@@ -34,7 +36,13 @@ const TableFly: React.FC<{ vuelos: IFly[] }> = ({ vuelos }) => {
           vuelos
             .sort((a, b) => sortDate(a, b))
             .filter((fly) =>
-              filterOriDestPass(fly, destination, origin, parseInt(passengers))
+              filterOriDestPass(
+                fly,
+                destination,
+                origin,
+                parseInt(passengers),
+                getDateValue(originTicket.data)
+              )
             )
         );
       }
@@ -57,7 +65,7 @@ const TableFly: React.FC<{ vuelos: IFly[] }> = ({ vuelos }) => {
             {displayVuelos.length > 0 &&
               displayVuelos.map((fly) => (
                 <tr>
-                  <td>{fly.data}</td>
+                  <td>{formatDate(fly.data)}</td>
                   <td>{fly.price}</td>
                   <td>{fly.availability}</td>
                   <td>
@@ -78,7 +86,7 @@ const TableFly: React.FC<{ vuelos: IFly[] }> = ({ vuelos }) => {
             {displayVuelos.length > 0 &&
               displayVuelos.map((fly) => (
                 <tr>
-                  <td>{fly.data}</td>
+                  <td>{formatDate(fly.data)}</td>
                   <td>{fly.price}</td>
                   <td>{fly.availability}</td>
                   <td>
