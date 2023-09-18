@@ -543,7 +543,7 @@
 }
 /*#endregion */
 
-/*#region CUATRO_DESTINOS */  
+/*#region CUATRO_DESTINOS */
 .cuatroDestinos {
   height: fit-content;
   width: 100%;
@@ -584,6 +584,57 @@
   color: white;
   -webkit-text-stroke: 2px #121212;
   cursor: default;
+}
+/*#endregion */
+
+/*#region TABLE_FLY */
+.tableFly {
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.tableFly td,
+.tableFly th {
+  text-align: center;
+  padding: 8px;
+}
+
+.tableFly td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 13px;
+}
+
+.tableFly thead th {
+  border-bottom: 1px solid gainsboro;
+  color: gray;
+}
+
+.tableFly tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.tableFly_seleccionar {
+  transition: 120ms ease-in-out 0s;
+  height: 24px;
+  width: 27%;
+  background-color: #0071ad;
+  border: none;
+  border-radius: 15px;
+  color: #f8f8f8;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tableFly_seleccionar:hover {
+  transition: 60ms ease-in-out 0s;
+  width: 30%;
 }
 /*#endregion */
 
@@ -669,6 +720,16 @@
   .cuatroDestinos_art {
     max-width: 24%;
     min-width: 270px;
+  }
+  /*#endregion */
+
+  /*#region TABLE_FLY */
+  .tableFly_seleccionar {
+    width: 45%;
+  }
+
+  .tableFly_seleccionar:hover {
+    width: 48%;
   }
   /*#endregion */
 }
@@ -964,5 +1025,13 @@
   }
   /*#endregion */
 
+  /*#region TABLE_FLY */
+  .tableFly_seleccionar {
+    width: 72%;
+  }
 
+  .tableFly_seleccionar:hover {
+    width: 81%;
+  }
+  /*#endregion */
 }

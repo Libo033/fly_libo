@@ -1,4 +1,5 @@
 import { User } from "firebase/auth";
+import React, { SetStateAction } from "react";
 
 export interface ILayout {
   children: React.ReactNode;
@@ -29,4 +30,11 @@ export interface IFly {
   destination: string;
   origin: string;
   price: number;
+}
+
+export interface IFlyContext {
+  originTicket: IFly | null;
+  destinationTicket: IFly | null;
+  setOriginTicket: React.Dispatch<SetStateAction<IFly | null>> | null;
+  setDestinationTicket: React.Dispatch<SetStateAction<IFly | null>> | null;
 }

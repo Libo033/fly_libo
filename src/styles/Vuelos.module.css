@@ -35,51 +35,17 @@
   margin-bottom: 3rem;
 }
 
-.vuelos_table {
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: normal;
-  border: none;
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
-  background-color: white;
-}
+@media (min-width: 210px) and (max-width: 767px) and (orientation: portrait) {
+  .vuelos_container {
+    padding-inline: 3%;
+  }
 
-.vuelos_table td,
-.vuelos_table th {
-  text-align: center;
-  padding: 8px;
-}
+  .vuelos_title {
+    gap: 21px;
+  }
 
-.vuelos_table td {
-  border-right: 1px solid #f8f8f8;
-  font-size: 13px;
-}
-
-.vuelos_table thead th {
-  border-bottom: 1px solid gainsboro;
-  color: gray;
-}
-
-.vuelos_table tr:nth-child(even) {
-  background: #f8f8f8;
-}
-
-.vuelos_seleccionar {
-  transition: 120ms ease-in-out 0s;
-  height: 24px;
-  width: 27%;
-  background-color: #0071ad;
-  border: none;
-  border-radius: 15px;
-  color: #f8f8f8;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.vuelos_seleccionar:hover {
-  transition: 60ms ease-in-out 0s;
-  width: 30%;
+  .vuelos_tableContainer {
+    margin-top: 1.8rem;
+    margin-inline: 3%;
+  }
 }
