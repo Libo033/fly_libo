@@ -638,6 +638,96 @@
 }
 /*#endregion */
 
+/*#region TICKET */
+.ticket {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid gray;
+  border-radius: 18px;
+}
+
+.ticket_top {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  border-bottom: 1px solid gray;
+  background-color: #00a6ff;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.ticket_logo {
+  width: 111px;
+  height: auto;
+  margin-block: 9px;
+  margin-inline: 27px;
+  filter: invert(99%);
+}
+
+.ticket_bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 21px;
+  background-color: #00a6ff;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.ticket_bottom p {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.ticket_info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-block: 12px;
+}
+
+.ticket_or {
+  margin-block: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket_mid {
+  position: relative;
+}
+
+.ticket_midBackground {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60%;
+  height: fit-content;
+  position: absolute;
+  filter: opacity(9%);
+  object-fit: cover;
+}
+
+.ticket_or p {
+  width: 210px;
+  padding-inline: 36px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #303030;
+}
+
+.ticket_boarding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 9px;
+}
+
+.ticket_boardingTime {
+  font-weight: 600;
+  color: #515151;
+}
+/*#endregion */
+
 @media (min-width: 1921px) {
   /*#region NAVIGATION_BAR */
   .NavigationBar_logo {
@@ -1032,6 +1122,26 @@
 
   .tableFly_seleccionar:hover {
     width: 81%;
+  }
+  /*#endregion */
+
+  /*#region TICKET */
+  .ticket {
+    width: 100%;
+  }
+
+  .ticket_logo {
+    width: 90px;
+  }
+
+  .ticket_bottom p {
+    font-size: 11px;
+  }
+
+  .ticket_or p {
+    width: 150px;
+    padding-inline: 36px;
+    font-size: 18px;
   }
   /*#endregion */
 }

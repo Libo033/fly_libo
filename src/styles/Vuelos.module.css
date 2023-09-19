@@ -35,6 +35,34 @@
   margin-bottom: 3rem;
 }
 
+.vuelos_tickets {
+  margin-block: 6.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 32px;
+  align-items: center;
+}
+
+.vuelos_buttonContainer {
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vuelos_button {
+  width: 15%;
+  height: 36px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  background-color: #0071ad;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 @media (min-width: 210px) and (max-width: 767px) and (orientation: portrait) {
   .vuelos_container {
     padding-inline: 3%;
@@ -47,5 +75,13 @@
   .vuelos_tableContainer {
     margin-top: 1.8rem;
     margin-inline: 3%;
+  }
+
+  .vuelos_tickets {
+    margin-block: 4.5rem;
+  }
+
+  .vuelos_button {
+    width: 45%;
   }
 }
