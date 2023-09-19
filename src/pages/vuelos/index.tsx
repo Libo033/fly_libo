@@ -7,11 +7,13 @@ import data from "../../../FlyLiboDB.json";
 import { FlyContext } from "@/context/FlyContext";
 import Ticket from "@/components/Ticket";
 import TableFly from "@/components/TableFly";
+import { AuthContext } from "@/context/AuthContext";
 
 const Vuelos = () => {
   const router: NextRouter = useRouter();
   const { origin, destination } = router.query;
   const { originTicket, destinationTicket } = useContext(FlyContext);
+  const { user } = useContext(AuthContext);
 
   return (
     <Layout>
@@ -50,7 +52,16 @@ const Vuelos = () => {
         ) : undefined}
         {originTicket !== null && destinationTicket !== null ? (
           <div className={styles.vuelos_buttonContainer}>
-            <button className={styles.vuelos_button}>comprar</button>
+            {user ? (
+              <button className={styles.vuelos_button}>comprar</button>
+            ) : (
+              <button
+                className={styles.vuelos_button}
+                onClick={() => router.push("/")}
+              >
+                Iniciar sesion
+              </button>
+            )}
           </div>
         ) : undefined}
       </div>

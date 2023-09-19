@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import styles from "@/styles/Components.module.css";
 import Image from "next/image";
 import { FlyContext } from "@/context/FlyContext";
+import { formatDate } from "@/libs/formatDate";
 
 const Ticket: React.FC<IFly> = (props) => {
   return (
@@ -46,7 +47,7 @@ const Ticket: React.FC<IFly> = (props) => {
         </div>
         <div className={styles.ticket_boarding}>
           <p className={styles.ticket_boardingTime}>Boarding Time</p>
-          <p>{Math.floor(Math.random() * 24) + 1}:00</p>
+          <p>{formatDate(props.data)} - {Math.floor(Math.random() * 24) + 1}:00</p>
         </div>
       </div>
       <div className={styles.ticket_bottom}>
