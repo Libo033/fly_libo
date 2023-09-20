@@ -63,8 +63,8 @@ const TableFly: React.FC<{ vuelos: IFly[] }> = ({ vuelos }) => {
         {originTicket === null ? (
           <>
             {displayVuelos.length > 0 &&
-              displayVuelos.map((fly) => (
-                <tr>
+              displayVuelos.map((fly, index) => (
+                <tr key={index}>
                   <td>{formatDate(fly.data)}</td>
                   <td>{fly.price}</td>
                   <td>{fly.availability}</td>
@@ -84,8 +84,8 @@ const TableFly: React.FC<{ vuelos: IFly[] }> = ({ vuelos }) => {
         ) : (
           <>
             {displayVuelos.length > 0 &&
-              displayVuelos.map((fly) => (
-                <tr>
+              displayVuelos.map((fly, index) => (
+                <tr key={index}>
                   <td>{formatDate(fly.data)}</td>
                   <td>{fly.price}</td>
                   <td>{fly.availability}</td>

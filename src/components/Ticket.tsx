@@ -20,6 +20,7 @@ const Ticket: React.FC<IFly> = (props) => {
       <div className={styles.ticket_mid}>
         <Image
           className={styles.ticket_midBackground}
+          priority={true}
           src={
             "https://res.cloudinary.com/dsuydyqgz/image/upload/v1695131810/01-varios/aarowfqs8bhiqkrzepsm.png"
           }

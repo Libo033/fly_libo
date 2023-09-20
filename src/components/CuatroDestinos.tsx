@@ -9,6 +9,7 @@ const CuatroDestinos = () => {
       <section className={styles.cuatroDestinos}>
         <article className={styles.cuatroDestinos_art}>
           <Image
+            priority={true}
             className={styles.cuatroDestinos_artImage}
             src={
               "https://res.cloudinary.com/dsuydyqgz/image/upload/v1694201948/01-varios/bamgee6ohxtdlhhhzynl.jpg"
@@ -21,6 +22,7 @@ const CuatroDestinos = () => {
         </article>
         <article className={styles.cuatroDestinos_art}>
           <Image
+            priority={true}
             className={styles.cuatroDestinos_artImage}
             src={
               "https://res.cloudinary.com/dsuydyqgz/image/upload/v1694201947/01-varios/bhar5nne2rzl2p6ueyoi.jpg"
@@ -33,6 +35,7 @@ const CuatroDestinos = () => {
         </article>
         <article className={styles.cuatroDestinos_art}>
           <Image
+            priority={true}
             className={styles.cuatroDestinos_artImage}
             src={
               "https://res.cloudinary.com/dsuydyqgz/image/upload/v1694201947/01-varios/xuggvpn5leqj4t2gdua4.jpg"
@@ -45,6 +48,7 @@ const CuatroDestinos = () => {
         </article>
         <article className={styles.cuatroDestinos_art}>
           <Image
+            priority={true}
             className={styles.cuatroDestinos_artImage}
             src={
               "https://res.cloudinary.com/dsuydyqgz/image/upload/v1694201946/01-varios/e1tcbyqnwthlzqsf7ctl.jpg"

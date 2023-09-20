@@ -39,6 +39,7 @@ const FlySelect: React.FC<IFlySelect> = ({ origin: origen }) => {
     <div className={styles.flySelect}>
       <Image
         className={styles.flySelect_imgBackground}
+        priority={true}
         src={"/img/bariloche.jpg"}
         alt="bariloche"
         width={4068}

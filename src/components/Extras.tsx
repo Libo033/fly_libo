@@ -9,6 +9,7 @@ const Extras = () => {
       <section className={styles.extras_section}>
         <article className={styles.extras_article}>
           <Image
+            priority={true}
             className={styles.extras_image}
             src={"/img/dog.svg"}
             alt="dog"
