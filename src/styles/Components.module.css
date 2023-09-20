@@ -728,6 +728,24 @@
 }
 /*#endregion */
 
+/*#region COMPRAR_MINI_TICKET */
+.ComprarMiniTicket {
+  margin-block: 3rem;
+}
+
+.ComprarMiniTicket_title {
+  font-size: 21px;
+  font-weight: 600;
+  color: #303030;
+  margin-bottom: 9px;
+}
+
+.ComprarMiniTicket_total {
+  margin-top: 6px;
+  font-weight: 500;
+}
+/*#endregion */
+
 @media (min-width: 1921px) {
   /*#region NAVIGATION_BAR */
   .NavigationBar_logo {
