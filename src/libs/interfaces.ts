@@ -39,6 +39,7 @@ export interface IFlyContext {
   setOriginTicket: React.Dispatch<SetStateAction<IFly | null>> | null;
   setDestinationTicket: React.Dispatch<SetStateAction<IFly | null>> | null;
   setPassengers: React.Dispatch<SetStateAction<number | null>> | null;
+  handleDeleteAll: Function | null;
 }
 
 export interface IComprarMiniTicket {

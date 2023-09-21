@@ -6,17 +6,24 @@ import { AuthContext } from "@/context/AuthContext";
 import { NextRouter, useRouter } from "next/router";
 import { Drawer } from "@mui/material";
 import OpenDrawer from "./OpenDrawer";
+import { FlyContext } from "@/context/FlyContext";
 
 const NavigationBar = () => {
   const router: NextRouter = useRouter();
   const { loaded, logOut, user } = useContext(AuthContext);
   const [toggleDrawer, setToggleDrawer] = useState<boolean>(false);
+  const { handleDeleteAll } = useContext(FlyContext);
 
   const handleLogOut = async () => {
     if (loaded && logOut) {
       await logOut();
       router.push("/");
     }
+  };
+
+  const handleLogoRedirect = () => {
+    if (handleDeleteAll) handleDeleteAll();
+    router.push("/inicio");
   };
 
   return (
@@ -39,7 +46,7 @@ const NavigationBar = () => {
       <ul className={styles.NavigationBar_logoUl}>
         <li className={styles.NavigationBar_logoLi}>
           <Image
-            onClick={() => router.push("/inicio")}
+            onClick={() => handleLogoRedirect()}
             className={styles.NavigationBar_logo}
             src={"/img/FlyLibo-logos_noback.png"}
             alt="FlyLibo"

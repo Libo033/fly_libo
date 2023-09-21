@@ -1,5 +1,5 @@
 import { IFly, IFlyContext } from "@/libs/interfaces";
-import React, { useEffect, useState, createContext } from "react";
+import React, { useState, createContext } from "react";
 
 const defaultValue: IFlyContext = {
   originTicket: null,
@@ -7,7 +7,8 @@ const defaultValue: IFlyContext = {
   setOriginTicket: null,
   setDestinationTicket: null,
   passengers: null,
-  setPassengers: null
+  setPassengers: null,
+  handleDeleteAll: null
 };
 
 export const FlyContext: React.Context<IFlyContext> =
@@ -20,6 +21,12 @@ export const FlyContextProvider: React.FC<{ children: React.ReactNode }> = ({
   const [destinationTicket, setDestinationTicket] = useState<IFly | null>(null);
   const [passengers, setPassengers] = useState<number | null>(null);
 
+  const handleDeleteAll = (): void => {
+    setOriginTicket(null);
+    setDestinationTicket(null);
+    setPassengers(null);
+  };
+
   return (
     <FlyContext.Provider
       value={{
@@ -29,6 +36,7 @@ export const FlyContextProvider: React.FC<{ children: React.ReactNode }> = ({
         setOriginTicket,
         setDestinationTicket,
         setPassengers,
+        handleDeleteAll
       }}
     >
       {children}
