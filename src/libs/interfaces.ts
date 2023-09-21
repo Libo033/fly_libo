@@ -44,4 +44,5 @@ export interface IFlyContext {
 export interface IComprarMiniTicket {
   ticket: IFly;
   passengers: number;
+  pasaje: string;
 }

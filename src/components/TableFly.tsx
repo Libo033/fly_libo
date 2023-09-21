@@ -47,7 +47,7 @@ const TableFly: React.FC<{ vuelos: IFly[] }> = ({ vuelos }) => {
         );
       }
     }
-  }, [origin, destination, passengers, originTicket, destinationTicket]);
+  }, [origin, destination, passengers, originTicket, destinationTicket, vuelos]);
 
   return (
     <table className={styles.tableFly}>

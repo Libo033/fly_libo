@@ -1,11 +1,9 @@
 import Layout from "@/components/Layout";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "@/styles/MiCuenta.module.css";
 import { NextRouter, useRouter } from "next/router";
 import { AuthContext } from "@/context/AuthContext";
 import LoadingPage from "@/components/LoadingPage";
-import Image from "next/image";
-import { url } from "inspector";
 
 const MiCuenta = () => {
   const router: NextRouter = useRouter();
@@ -15,12 +13,7 @@ const MiCuenta = () => {
     if (loaded && user === null) {
       router.push("/");
     }
-  }, [user, loaded, {}]);
-
-  /*
-    https://lh3.googleusercontent.com/a/AAcHTtfiYrWIK6fzYUo4QmjeWW9DOq90f3IcFyoMlqqy8PiEtw=s96-c
-    https://graph.facebook.com/6508600332553153/picture
-  */
+  }, [user, loaded, router]);
 
   return (
     <>

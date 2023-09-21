@@ -19,7 +19,7 @@ const Vuelos = () => {
     if (setPassengers !== null && passengers) {
       setPassengers(parseInt(passengers.toString()));
     }
-  }, [setPassengers]);
+  }, [setPassengers, passengers]);
 
   return (
     <Layout>

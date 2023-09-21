@@ -31,7 +31,7 @@ const Comprar = () => {
     ) {
       router.push("/inicio");
     }
-  }, [user, loaded]);
+  }, [user, loaded, originTicket, destinationTicket, passengers, router]);
 
   const handleComprar = () => {
     setLoading(true);
@@ -55,12 +55,14 @@ const Comprar = () => {
                   <ComprarMiniTicket
                     ticket={originTicket}
                     passengers={passengers}
+                    pasaje={"ida"}
                   />
                 )}
                 {destinationTicket && (
                   <ComprarMiniTicket
                     ticket={destinationTicket}
                     passengers={passengers}
+                    pasaje={"vuelta"}
                   />
                 )}
                 {destinationTicket && originTicket && (

@@ -5,10 +5,11 @@ import { IComprarMiniTicket } from "@/libs/interfaces";
 const ComprarMiniTicket: React.FC<IComprarMiniTicket> = ({
   passengers,
   ticket,
+  pasaje
 }) => {
   return (
     <div className={styles.ComprarMiniTicket}>
-      <p className={styles.ComprarMiniTicket_title}>Pasaje ida</p>
+      <p className={styles.ComprarMiniTicket_title}>Pasaje {pasaje}</p>
       <p>
         Desde <i>{ticket.origin}</i> hasta&nbsp;
         <i>{ticket.destination}</i>

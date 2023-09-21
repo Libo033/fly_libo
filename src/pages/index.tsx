@@ -20,7 +20,7 @@ export default function Home() {
     if (loaded && user) {
       router.push("/inicio");
     }
-  }, [user]);
+  }, [user, loaded, router]);
 
   return (
     <>
