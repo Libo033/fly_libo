@@ -33,8 +33,6 @@ const useFetchNotes = (): {
 
           if (docSnap.exists()) {
             setFetchNotes(docSnap.data());
-          } else {
-            console.log("Ops");
           }
         } catch (error) {
           if (error instanceof Error) {

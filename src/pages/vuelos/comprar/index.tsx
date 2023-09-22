@@ -6,6 +6,15 @@ import styles from "@/styles/Vuelos.module.css";
 import Layout from "@/components/Layout";
 import LoadingPage from "@/components/LoadingPage";
 import ComprarMiniTicket from "@/components/ComprarMiniTicket";
+import {
+  DocumentData,
+  DocumentReference,
+  doc,
+  setDoc,
+} from "firebase/firestore";
+import { db } from "@/libs/Firebase";
+import useFetchNotes from "@/libs/fetchNotes";
+import { IFly } from "@/libs/interfaces";
 
 const Comprar = () => {
   const router: NextRouter = useRouter();
@@ -19,6 +28,7 @@ const Comprar = () => {
     setDestinationTicket,
     setPassengers,
   } = useContext(FlyContext);
+  const { fetchNotes } = useFetchNotes();
 
   useEffect(() => {
     if (loaded && user === null) {
@@ -33,14 +43,45 @@ const Comprar = () => {
     }
   }, [user, loaded, originTicket, destinationTicket, passengers, router]);
 
-  const handleComprar = () => {
-    setLoading(true);
-    if (setOriginTicket && setDestinationTicket && setPassengers) {
-      setOriginTicket(null);
-      setDestinationTicket(null);
-      setPassengers(null);
+  const handleComprar = async (ida: IFly, vuelta: IFly) => {
+    try {
+      setLoading(true);
+      if (setOriginTicket && setDestinationTicket && setPassengers) {
+        setOriginTicket(null);
+        setDestinationTicket(null);
+        setPassengers(null);
+      }
+      if (user) {
+        const userRef: DocumentReference<DocumentData> = doc(
+          db,
+          "users",
+          user.uid
+        );
+        let value: number = 1;
+
+        if (fetchNotes?.notas) {
+          let cantidadNotes = Object.keys(fetchNotes.notas);
+          value = cantidadNotes.length + 1;
+        }
+
+        await setDoc(
+          userRef,
+          {
+            notas: {
+              [value]: { ida: ida, vuelta: vuelta, passengers },
+            },
+          },
+          { merge: true }
+        );
+      }
+
+      router.push("/reservas");
+    } catch (error) {
+      if (error instanceof Error) {
+        console.log(error.message);
+      }
+      router.push("/inicio");
     }
-    router.push("/reservas");
   };
 
   return (
@@ -75,12 +116,16 @@ const Comprar = () => {
                   </p>
                 )}
                 <div className={styles.comprar_buttonContainer}>
-                  <button
-                    className={styles.comprar_button}
-                    onClick={() => handleComprar()}
-                  >
-                    comprar
-                  </button>
+                  {destinationTicket && originTicket && (
+                    <button
+                      className={styles.comprar_button}
+                      onClick={() =>
+                        handleComprar(originTicket, destinationTicket)
+                      }
+                    >
+                      comprar
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
