@@ -68,6 +68,34 @@
   font-size: 0.9em;
 }
 
+.loginPage_separator {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.loginPage_separator::before,
+.loginPage_separator::after {
+  content: "";
+  flex: 1 1 10%;
+  border-bottom: 1px solid gainsboro;
+  transform: translateY(-50%);
+  margin: 0px 24px;
+}
+
+.loginPage_separatorSpan {
+  text-align: center;
+  color: gray;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.loginPage_ingresa {
+  width: 100%;
+  text-align: center;
+  margin-block: 1rem;
+}
+
 @media (min-width: 1921px) {
   .loginPage {
     border: 1px solid gray;

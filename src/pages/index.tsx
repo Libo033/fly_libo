@@ -4,6 +4,7 @@ import { AuthContext } from "@/context/AuthContext";
 import styles from "@/styles/Home.module.css";
 import { Titillium_Web } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import React, { useContext, useEffect } from "react";
 
@@ -38,6 +39,12 @@ export default function Home() {
             </div>
             <h1 className={styles.loginPage_title}>Iniciar sesion</h1>
             <LoginGroup />
+            <div className={styles.loginPage_separator}>
+              <span className={styles.loginPage_separatorSpan}>O</span>
+            </div>
+            <div className={styles.loginPage_ingresa}>
+              <Link href={"/inicio"}>Ingresa sin logearte</Link>
+            </div>
             <p className={styles.loginPage_leftSlogan}>
               La libertad de volar, paso a paso
             </p>
