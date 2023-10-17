@@ -27,14 +27,6 @@ const Reservas = () => {
                 para crearlas.
               </p>
             )}
-            {user !== null && (
-              <div className={styles.reservas_container}>
-                <p className={styles.reservas_emptyTxt}>
-                  No tenes reservas.
-                  <br /> Cuando tengas reservas apareceran aqui.
-                </p>
-              </div>
-            )}
             <Divider />
             <Extras />
             <Divider />
@@ -50,3 +42,4 @@ const Reservas = () => {
 };
 
 export default Reservas;
+

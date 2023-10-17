@@ -47,3 +47,21 @@ export interface IComprarMiniTicket {
   passengers: number;
   pasaje: string;
 }
+
+export interface INotes {
+  ida: {
+    availability: number;
+    data: string;
+    destination: string;
+    origin: string
+    price: number
+  },
+  vuelta: {
+    availability: number;
+    data: string;
+    destination: string;
+    origin: string
+    price: number
+  },
+  passengers: number
+}

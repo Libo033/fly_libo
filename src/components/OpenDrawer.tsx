@@ -23,18 +23,18 @@ const OpenDrawer: React.FC<IOpenDrawer> = ({ handleLogOut, loaded, user }) => {
         />
       </li>
       <li className={styles.openDrawer_li}>
-        <Link className={styles.openDrawer_link} href={"/"}>
+        <Link className={styles.openDrawer_link} href={"/reservas"}>
           Reservas
         </Link>
       </li>
       <li className={styles.openDrawer_li}>
-        <Link className={styles.openDrawer_link} href={"/"}>
+        <Link className={styles.openDrawer_link} href={"/destinos"}>
           Destinos
         </Link>
       </li>
       <li className={styles.openDrawer_li}>
         {loaded && user ? (
-          <Link className={styles.openDrawer_link} href={"/"}>
+          <Link className={styles.openDrawer_link} href={"/micuenta"}>
             Mi cuenta
           </Link>
         ) : undefined}

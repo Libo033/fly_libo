@@ -8,13 +8,14 @@ import {
 } from "firebase/firestore";
 import { useContext, useEffect, useState } from "react";
 import { db } from "./Firebase";
+import { INotes } from "./interfaces";
 
 const useFetchNotes = (): {
   loaded: boolean;
-  fetchNotes: DocumentData | null;
+  fetchNotes: Array<INotes> | null;
 } => {
   const [loaded, setLoaded] = useState<boolean>(false);
-  const [fetchNotes, setFetchNotes] = useState<DocumentData | null>(null);
+  const [fetchNotes, setFetchNotes] = useState<Array<INotes> | null>(null);
   const { user, loaded: authLoaded } = useContext(AuthContext);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const useFetchNotes = (): {
           const docSnap: DocumentSnapshot<DocumentData> = await getDoc(docRef);
 
           if (docSnap.exists()) {
-            setFetchNotes(docSnap.data());
+            setFetchNotes(docSnap.data().notas);
           }
         } catch (error) {
           if (error instanceof Error) {
@@ -46,7 +47,7 @@ const useFetchNotes = (): {
     fetchData();
   }, [user]);
 
-  return { loaded, fetchNotes };
+  return {loaded, fetchNotes};
 };
 
 export default useFetchNotes;
